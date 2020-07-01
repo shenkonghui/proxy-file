@@ -5,6 +5,7 @@
 ```
 #!/bin/bash 
 iptables -F
+iptables -X 
 # Create new chain 
 iptables -t nat -N SHADOWSOCKS  
 iptables -t nat -A PREROUTING -p tcp -j SHADOWSOCKS  
