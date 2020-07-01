@@ -2,7 +2,7 @@
 
 
 ## iptables透明代理
-、、、
+```
 #!/bin/bash 
 iptables -F
 # Create new chain 
@@ -31,4 +31,4 @@ iptables -t nat -A SHADOWSOCKS -d 0.0.0.0/254.0.0.0 -j RETURN
 #还可以加如国内ip段参见 https://gist.github.com/wen-long/8644507 
 # Anything else should be redirected to shadowsocks’s local port 
 iptables -t nat -A SHADOWSOCKS -p tcp -–to-ports 1081 -j REDIRECT 
-、、、
+```
